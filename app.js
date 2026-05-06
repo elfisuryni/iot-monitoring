@@ -268,8 +268,8 @@ function updateLED(suhu) {
   const title = document.getElementById('ind-title');
   const desc  = document.getElementById('ind-desc');
   led.className = 'indicator-led';
-  if      (suhu >= 20 && suhu <= 25.9) { led.classList.add('green');  title.textContent = 'LED HIJAU — Normal';      desc.textContent = `Suhu ${suhu.toFixed(1)}°C · Kondisi ideal (20–25.9°C) · Relay 1 ON`; }
-  else if (suhu >= 26 && suhu <= 30.9) { led.classList.add('yellow'); title.textContent = 'LED KUNING — Perhatian';  desc.textContent = `Suhu ${suhu.toFixed(1)}°C · Mulai hangat (26–30.9°C) · Relay 2 ON`; }
+  if      (suhu >= 20 && suhu <= 25.9) { led.classList.add('green');  title.textContent = 'LED MERAH — Normal';      desc.textContent = `Suhu ${suhu.toFixed(1)}°C · Kondisi ideal (20–25.9°C) · Relay 1 ON`; }
+  else if (suhu >= 26 && suhu <= 30.9) { led.classList.add('yellow'); title.textContent = 'LED MERAH — Perhatian';  desc.textContent = `Suhu ${suhu.toFixed(1)}°C · Mulai hangat (26–30.9°C) · Relay 2 ON`; }
   else if (suhu >= 31)                 { led.classList.add('red');    title.textContent = 'LED MERAH — Peringatan!'; desc.textContent = `Suhu ${suhu.toFixed(1)}°C · Terlalu panas (≥31°C) · Relay 3 ON`; }
   else                                 {                               title.textContent = 'LED — Di luar rentang';   desc.textContent = `Suhu ${suhu.toFixed(1)}°C`; }
 }
