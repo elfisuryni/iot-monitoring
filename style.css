@@ -690,3 +690,190 @@ footer {
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-author { align-items: center; }
 }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE MOBILE — Tambahan
+   ════════════════════════════════════════════ */
+
+/* ── Tablet (max 768px) ── */
+@media (max-width: 768px) {
+  header {
+    padding: 14px 16px 12px;
+    gap: 10px;
+  }
+
+  .logo-text h1 { font-size: 1.1rem; }
+  .logo-text span { font-size: .66rem; }
+  .logo-icon { width: 40px; height: 40px; border-radius: 11px; }
+  .logo-icon svg { width: 22px; height: 22px; }
+
+  .clock-wrap { padding: 6px 14px; }
+  #clock { font-size: .8rem; }
+  #date-display { font-size: .6rem; }
+
+  main { padding: 20px 14px 48px; }
+
+  .status-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .status-center { width: 100%; }
+  .btn-group { width: 100%; justify-content: flex-start; }
+  .btn { font-size: .75rem; padding: 9px 16px; }
+
+  .cards { gap: 14px; }
+  .card { padding: 18px 18px 16px; border-radius: 18px; }
+  .card-value { font-size: 3rem; }
+  #card-ldr .card-value { font-size: 2.2rem; }
+
+  .relay-section { padding: 16px 16px 18px; }
+  .relay-section-title { font-size: .63rem; flex-wrap: wrap; }
+  .relay-top-bar { gap: 8px; }
+  .relay-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  .chart-section { padding: 16px 16px 14px; }
+  .chart-header { gap: 8px; }
+  .chart-wrap { height: 200px; }
+  .chart-controls { gap: 5px; }
+  .chart-tab { font-size: .68rem; padding: 4px 10px; }
+  .chart-clear { font-size: .68rem; padding: 4px 10px; }
+
+  .log-header { flex-wrap: wrap; gap: 8px; }
+  .log-header h2 { font-size: .72rem; }
+
+  /* Table scroll horizontal */
+  .log-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { min-width: 520px; }
+  td, thead th { padding: 9px 12px; font-size: .74rem; }
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+  header {
+    padding: 12px 14px 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logo { gap: 10px; min-width: 0; flex: 1; }
+  .logo-icon { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0; }
+  .logo-icon svg { width: 20px; height: 20px; }
+  .logo-text h1 { font-size: .95rem; letter-spacing: .03em; }
+  .logo-text span { font-size: .6rem; }
+
+  .clock-wrap {
+    padding: 5px 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  #clock { font-size: .72rem; letter-spacing: .07em; }
+  #date-display { font-size: .55rem; }
+
+  main { padding: 14px 10px 40px; }
+
+  .status-bar {
+    padding: 10px 12px;
+    border-radius: 13px;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .status-left { gap: 8px; flex-wrap: wrap; }
+  #status-label { font-size: .76rem; }
+  .status-meta { font-size: .63rem; }
+  .btn-group { gap: 7px; }
+  .btn { font-size: .72rem; padding: 8px 13px; border-radius: 8px; }
+  .btn-connect, .btn-disconnect { flex: 1; text-align: center; justify-content: center; }
+
+  /* Cards — 1 kolom penuh */
+  .cards { grid-template-columns: 1fr; gap: 12px; margin-bottom: 16px; }
+  #card-ldr { grid-column: 1; }
+
+  .card { padding: 16px 16px 14px; border-radius: 16px; }
+  .card-label { font-size: .63rem; margin-bottom: 10px; }
+  .card-value { font-size: 2.6rem; }
+  .card-unit { font-size: 1.1rem; }
+  #card-ldr .card-value { font-size: 2rem; }
+  .card-bar { height: 7px; margin-top: 12px; }
+  .card-sub { font-size: .65rem; }
+  .ldr-badge { font-size: .66rem; padding: 3px 10px; }
+
+  /* LED Indicator */
+  #indicator-wrap {
+    padding: 14px 14px;
+    border-radius: 13px;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .indicator-led { width: 28px; height: 28px; }
+  .indicator-text strong { font-size: .86rem; }
+  .indicator-text span { font-size: .66rem; }
+
+  /* Chart */
+  .chart-section { padding: 14px 12px 12px; border-radius: 16px; margin-bottom: 16px; }
+  .chart-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .chart-title { font-size: .66rem; }
+  .chart-controls { gap: 5px; flex-wrap: wrap; }
+  .chart-tab { font-size: .64rem; padding: 4px 9px; border-radius: 7px; }
+  .chart-clear { font-size: .64rem; padding: 4px 9px; }
+  .chart-wrap { height: 180px; margin-bottom: 8px; }
+  .chart-legend { gap: 10px; }
+  .legend-item { font-size: .65rem; }
+
+  /* Relay */
+  .relay-section { padding: 14px 12px 16px; border-radius: 16px; margin-bottom: 18px; }
+  .relay-section-title {
+    font-size: .6rem; gap: 5px;
+    flex-direction: column; align-items: flex-start;
+  }
+  .relay-top-bar { gap: 7px; }
+  .btn-danger { font-size: .72rem; padding: 8px 12px; border-radius: 8px; }
+
+  /* Relay tombol ALL ON / ALL OFF / RESET lebih kecil */
+  #btn-all-on, #btn-all-off, #btn-reset {
+    font-size: .68rem !important;
+    padding: 7px 12px !important;
+    flex: 1;
+  }
+  .relay-divider { display: none; }
+  .relay-mode-wrap { width: 100%; justify-content: flex-end; }
+
+  .relay-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .relay-btn { padding: 13px 8px 11px; border-radius: 13px; }
+  .relay-name { font-size: .74rem; }
+  .relay-gpio { font-size: .56rem; }
+  .relay-status { font-size: .58rem; padding: 2px 8px; }
+  .relay-led { width: 17px; height: 17px; }
+
+  /* Log / Table */
+  .log-header { gap: 8px; }
+  .log-header h2 { font-size: .68rem; }
+  #log-count { font-size: .66rem; }
+  .btn-export { font-size: .68rem; padding: 6px 12px; }
+  .log-table-wrap { border-radius: 13px; overflow-x: auto; }
+  table { min-width: 460px; }
+  td, thead th { padding: 8px 10px; font-size: .68rem; }
+  .badge { font-size: .62rem; padding: 2px 8px; }
+  .empty-row td { padding: 28px; font-size: .76rem; }
+
+  /* Toast */
+  #toast { right: 12px; bottom: 18px; left: 12px; max-width: none; font-size: .78rem; padding: 10px 16px; }
+
+  /* Footer */
+  .footer-inner { padding: 14px 16px; gap: 8px; }
+  .footer-title { font-size: .76rem; }
+  .footer-sub { font-size: .62rem; }
+  .footer-name { font-size: .82rem; }
+}
+
+/* ── Sangat kecil (max 360px) ── */
+@media (max-width: 360px) {
+  .logo-text h1 { font-size: .85rem; }
+  .card-value { font-size: 2.2rem; }
+  .relay-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .relay-btn { padding: 11px 6px 9px; }
+  .chart-wrap { height: 160px; }
+  table { min-width: 420px; }
+  #btn-all-on, #btn-all-off, #btn-reset { font-size: .62rem !important; padding: 6px 8px !important; }
+}
